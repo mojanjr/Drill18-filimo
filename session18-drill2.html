@@ -1,0 +1,309 @@
+<html>
+    <head>
+        <title>FilimoBox-session18</title>
+        <!-- <link rel="stylesheet" href="assets/css/session18-drill2.css"/> -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css"/>
+        <link rel="stylesheet" href="assets/css/brands.css"/>
+        <link rel="stylesheet" href="assets/css/regular.css"/>
+        <link rel="stylesheet" href="assets/css/solid.css"/>
+        <style>
+            @font-face {
+                font-family: Vazir;
+                src: url('assets/fonts/vazir/Vazirmatn-Regular.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: Vazir;
+                src: url('assets/fonts/vazir/Vazirmatn-Black.woff2') format('woff2');
+                font-weight: 900;
+                font-style: normal;
+                font-display: swap;
+            }
+            *,
+            *:after,
+            *:before {
+                box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            body {
+                direction: rtl;
+                margin: 0 auto;
+                background: #141518;
+                color: #fff;
+                font-family: vazir;
+                font-weight: 400;
+            }
+            h2 {
+                font-family: vazir;
+                font-weight: 900;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            .container {
+                width: 1200px;
+                margin: 0 auto;
+                border-bottom: 2px solid #3f3f3f;
+                padding-bottom: 100px;
+            }
+            .filimo-box {
+                text-align: center;
+                position: relative;
+            }
+            .filimo-box .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 0;
+            }
+            .filimo-box img.logo {
+                height: 45px;
+                width: auto;
+            }
+            .filimo-box h2 {
+                font-size: 22px;
+            }
+            .filimo-box p {
+                font-size: 16px;
+                color: #959ba2;
+                margin: 0;
+            }
+            .filimo-box button {
+                margin: 30px 0;
+                color: #f4843f;
+                font-size: 17px;
+                font-family: vazir;
+                background: rgba(251, 181, 60, 0.06);
+                border-radius: 30px;
+                padding: 10px 30px;
+            }
+            .filimo-box button i {
+                margin-right: 10px;
+                color: #f89f3e;
+                font-size: 15px;
+            }
+            .filimo-box ul {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+            }
+            .filimo-box ul li {
+                position: relative;
+                border: 5px solid #000;
+                overflow: hidden;
+            }
+            .filimo-box ul li a img {
+                width: 370px;
+                display: block;
+                opacity: 0.7;
+                transition: all 0.4s;
+            }
+            .filimo-box ul li:hover a img {
+                transform: scale(1.1);
+            }
+            .filimo-box ul li a h3 {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                padding: 8px;
+                border-radius: 30px;
+                background: rgba(0 ,0 ,0 , 0.5);
+                white-space: nowrap;
+                font-weight: 100;
+                font-size: 13px;
+            }
+            .filimo-box ul li a .button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 15px;
+            }
+            .filimo-box ul li a .button .border {
+                position: relative;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: rgba(0 ,0 ,0 , 0.5);
+                transition: all 0.3s;
+            }
+            .filimo-box ul li:hover a .button .border {
+                background: rgba(255, 255 ,255 , 0.2);
+            }
+            .filimo-box ul li a .button .fa-play {
+                position: absolute;
+                top: 37%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+            }
+            .filimo-box .arrows i {
+                position: absolute;
+                top: 62%;
+                width: 40px;
+                height: 40px;
+                background: rgba(6, 6, 6, 0.6);
+                border-radius: 50%;
+                color: #fff;
+                line-height: 40px;
+                font-size: 20px;
+            }
+            .filimo-box .arrows i.fa-angle-right {
+                right: 14%;
+            }
+            .filimo-box .arrows i.fa-angle-left {
+                left: 11%;
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+        <script type="text/babel">
+            var rootElement = document.getElementById("root")
+            
+            var filimoBox1 = [
+                {
+                    imageUrl: "assets/images/1.png",
+                    link: "https://www.aparat.com/video/video/embed/videohash/7uROr/vt/frame?t=0",
+                    text: "فیلیموباکس چیست و چه امکاناتی دارد؟",
+                },
+                {
+                    imageUrl: "assets/images/2.png",
+                    link: "www.aparat.com/video/video/embed/videohash/KEW8c/vt/frame?t=0",
+                    text: "چطور با فیلیموباکس فیلم تماشا کنیم؟",
+                },
+                {
+                    imageUrl: "assets/images/3.png",
+                    link: "www.aparat.com/video/video/embed/videohash/5du7V/vt/frame?t=1",
+                    text: "چطور با کنترل فیلیموباکس کار کنیم؟",
+                }
+            ]
+            var filimoBox2 = [
+                {
+                    imageUrl: "assets/images/4.png",
+                    link: "www.aparat.com/video/video/embed/videohash/NLHWY/vt/frame?t=0",
+                    text: "چطور برنامه فیلیمو را روی تلویزیون خود نصب کنیم؟"
+                },
+                {
+                    imageUrl: "assets/images/5.png",
+                    link: "www.aparat.com/video/video/embed/videohash/hg1TZ/vt/frame?t=0",
+                    text: "برای تماشا روی تلویزیون های LG چه کار کنیم؟",
+                },
+                {
+                    imageUrl: "assets/images/6.png",
+                    link: "www.aparat.com/video/video/embed/videohash/l78K9/vt/frame?t=0",
+                    text: "چطور با اتصال کابل به تلویزیون قدیمی، فیلیو تماشا کنیم؟",
+                }
+            ]
+            var filimoBox3 = [
+                {
+                    imageUrl: "assets/images/7.png",
+                    link: "www.aparat.com/video/video/embed/videohash/UhCDR/vt/frame?t=0",
+                    text: "روش آیینه کردن (اسکرین میرور) یعنی چی و چطور انجامش بدهیم؟"
+                },
+                {
+                    imageUrl: "assets/images/8.png",
+                    link: "www.aparat.com/video/video/embed/videohash/DCeB1/vt/frame?t=0",
+                    text: "روش کست کردن یعنی چی و چطور انجامش بدیم؟",
+                },
+                {
+                    imageUrl: "assets/images/9.png",
+                    link: "www.aparat.com/video/video/embed/videohash/4Cold/vt/frame?t=0",
+                    text: "چطوری با جستجو در مرورگر تلویزیون، فیلیمو تماشا کنیم؟",
+                }
+            ]
+           
+            function FilimoBox(props) {
+                return props.data.map(function(box) {
+                    return(
+                        <li>
+                            <a href={box.link}>
+                                <img src={box.imageUrl}/>
+                                <div className="button">
+                                    <div className="border"></div>
+                                    <i className="fa-solid fa-play"></i>
+                                </div>
+                                <h3>{box.text}</h3>
+                            </a>
+                        </li>
+                    )
+                })
+            }
+                var element = (<div>
+                    <div className="filimo-box">
+                        <div className="container">
+                            <div className="title">
+                                <img className="logo" src="https://www.filimo.com/assets/web/ui/img-23SjILqYCSaEPakKNJTVXw/campaigns/big-screen_v2/filimobox_colored.png"/>
+                                <h2>فیلیموباکس چیست؟</h2>
+                            </div>
+                            <p>برای تماشای فیلیمو، تلویزیون شما باید هوشمند باشد، اگر نیست، با تهیه یک اندروید باکس، تلویزیون خود را هوشمند کنید، ما به شما فیلیمو باکس را پیشنهاد می‌کنیم که به تلویزیون وصل می‌شود و آن را هوشمند می‌کند. چطوری؟ کافیست ویدیو‌های زیر را تماشا‌کنید.</p>
+                            <a className="button" href="https://www.filimo.com/filimobox">
+                                <button>اطلاعات بیشتر<i className="fa-solid fa-arrow-left"></i></button>
+                            </a>
+                            <ul className="video-list">
+                                <FilimoBox data={filimoBox1}></FilimoBox>
+                            </ul>
+                            <div className="arrows">
+                                <i className="fa-solid fa-angle-right"></i>
+                                <i className="fa-solid fa-angle-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="filimo-box">
+                        <div className="container">
+                            <div className="title">
+                                <img className="logo" src="https://www.filimo.com/assets/web/ui/img-23SjILqYCSaEPakKNJTVXw/campaigns/big-screen_v2/filimobox_colored.png"/>
+                                <h2>فیلیموباکس چیست؟</h2>
+                            </div>
+                            <p>برای تماشای فیلیمو، تلویزیون شما باید هوشمند باشد، اگر نیست، با تهیه یک اندروید باکس، تلویزیون خود را هوشمند کنید، ما به شما فیلیمو باکس را پیشنهاد می‌کنیم که به تلویزیون وصل می‌شود و آن را هوشمند می‌کند. چطوری؟ کافیست ویدیو‌های زیر را تماشا‌کنید.</p>
+                            <a className="button" href="#https://www.filimo.com/filimobox">
+                                <button>اطلاعات بیشتر<i className="fa-solid fa-arrow-left"></i></button>
+                            </a>
+                            <ul className="video-list">
+                                <FilimoBox data={filimoBox2}></FilimoBox>
+                            </ul>
+                            <div className="arrows">
+                                <i className="fa-solid fa-angle-right"></i>
+                                <i className="fa-solid fa-angle-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="filimo-box">
+                        <div className="container">
+                            <div className="title">
+                                <img className="logo" src="https://www.filimo.com/assets/web/ui/img-23SjILqYCSaEPakKNJTVXw/campaigns/big-screen_v2/filimobox_colored.png"/>
+                                <h2>فیلیموباکس چیست؟</h2>
+                            </div>
+                            <p>برای تماشای فیلیمو، تلویزیون شما باید هوشمند باشد، اگر نیست، با تهیه یک اندروید باکس، تلویزیون خود را هوشمند کنید، ما به شما فیلیمو باکس را پیشنهاد می‌کنیم که به تلویزیون وصل می‌شود و آن را هوشمند می‌کند. چطوری؟ کافیست ویدیو‌های زیر را تماشا‌کنید.</p>
+                            <a className="button" href="https://www.filimo.com/filimobox">
+                                <button>اطلاعات بیشتر<i className="fa-solid fa-arrow-left"></i></button> 
+                            </a>
+                            <ul className="video-list">
+                                <FilimoBox data={filimoBox3}></FilimoBox>
+                            </ul>
+                            <div className="arrows">
+                                <i className="fa-solid fa-angle-right"></i>
+                                <i className="fa-solid fa-angle-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>)
+            ReactDOM.render(element, rootElement)
+        </script>
+    </body>
+</html>
